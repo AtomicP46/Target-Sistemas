@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+
+int indice, soma, k;
+
+int main() {
+
+	indice=12;
+	soma=0;
+	k=1;
+	
+	for(k;k<indice;){
+		k++;
+		soma=soma+k;
+	}
+	
+	printf("%d", soma);
+	
+	return 0;
+
+}
+
+//A resposta será 77
