@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+int entrada, Fibbo[1000];
+
+int main() {
+
+	Fibbo[0]=1;
+	Fibbo[1]=1;
+
+	for(int i=2; i<1000; i++){
+		Fibbo[i]=Fibbo[i-1]+Fibbo[i-2];
+	}
+	
+	int alavanca;
+	
+	printf("Insira Sua Entrada:\n");
+	scanf("%d", &entrada);
+	
+	comparador(entrada, Fibbo);
+	
+	return 0;
+
+}
+
+void comparador(int entrada, int Fibbo[1000]){
+	
+	int g;
+	
+	g=0;
+	
+	for(int i=0; i<1000; i++){
+		if(Fibbo[i]==entrada){
+			printf("O numero pertence a Sequencia\n");
+		g++;
+		break;
+		}
+	}
+	
+	if (g==0){
+		printf("O numero nao pertence a Sequencia\n");
+	}
+	
+}
